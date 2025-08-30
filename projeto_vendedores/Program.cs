@@ -78,16 +78,13 @@ do {
                 Console.WriteLine("Digite o id do vendedor a ser removido:");
                 id = int.Parse(Console.ReadLine());
 
-                //if (vendedores.OsVendedores[id].AsVendas.l) { }
-
                 Vendedor vendedorR = new(id);
                 if (!vendedores.remover(vendedorR))
                 {
                     Console.WriteLine("Vendedor não encontrado.");
                 }
                 else { Console.WriteLine("Vendedor removido com sucesso"); }
-               
-
+              
             }
             catch(Exception ex) {Console.WriteLine(ex.ToString());}
             break;

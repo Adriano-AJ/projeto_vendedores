@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -62,8 +63,10 @@ namespace projeto_vendedores
 
         public bool remover(Vendedor v)
         {
+
             int j;
-            bool podeRemover = (pesquisar(v).Id != -1);
+            bool podeRemover = (pesquisar(v).Id != -1) && (v.AsVendas == null);
+
             if (podeRemover)
             {
                 int i = 0;
